@@ -1,0 +1,33 @@
+<h1 class="header">Address Book</h1>
+
+<table mat-table [dataSource]="contacts">
+
+  <!-- First Name Column -->
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef class="bold-header">First Name</th>
+    <td mat-cell *matCellDef="let contact" class="center-content">
+      <img class="image-round" [src]="contact.picture.thumbnail" alt="User Image">
+      <span class="name-align">{{contact.name.first}}</span>
+  </ng-container>
+
+  <!-- Last Name Column -->
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef class="bold-header">Last Name</th>
+    <td mat-cell *matCellDef="let contact">{{contact.name.last}}</td>
+  </ng-container>
+
+  <!-- Phone Number Column -->
+  <ng-container matColumnDef="phoneNumber">
+    <th mat-header-cell *matHeaderCellDef class="bold-header">Phone Number</th>
+    <td mat-cell *matCellDef="let contact">{{contact.phone}}</td>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef class="bold-header">Email</th>
+    <td mat-cell *matCellDef="let contact">{{contact.email}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" class="bold-header"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openContact(row)"></tr>
+</table>

@@ -1,0 +1,30 @@
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: #C0C0C0;
+}
+
+.header {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #C0C0C0;
+  padding-bottom: 10px;
+}
+
+.image-round {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.bold-header {
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+}
+
+.name-align{
+  align-self: center;
+}
