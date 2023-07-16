@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {ContactsService} from "../contacts.service";
+import {Contact} from "../Interfaces/contact.interface";
+import {RandomUserResponse} from "../Interfaces/randomUserResponse.interface";
 
 @Component({
   selector: 'app-contact-list',
@@ -7,22 +9,18 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
-  contacts = [];
+  contacts: Contact[] = [];
 
   displayedColumns: string[] = ['firstName', 'lastName', 'phoneNumber', 'email'];
 
-  constructor(private http: HttpClient) {}
-  ngOnInit(){
-    this.loadContacts()
+  constructor(private contactsService: ContactsService) {}
+  ngOnInit() {
+    this.contactsService.getContacts().subscribe((data: RandomUserResponse) => {
+      console.log(data)
+      this.contacts = data.results;
+    });
   }
 
-  loadContacts(): void {
-    this.http.get('https://randomuser.me/api/?results=10')
-      .subscribe((data: any) => {
-        this.contacts = data.results;
-        console.log(this.contacts)
-      });
-  }
   openContact(contact: any): void {
     // Logic to open the Contact Information Card goes here
     console.log(contact);
