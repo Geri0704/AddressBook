@@ -8,10 +8,12 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgOptimizedImage} from "@angular/common";
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ContactListComponent
+    ContactListComponent,
+    ContactDetailComponent
   ],
   imports: [
     BrowserModule,
