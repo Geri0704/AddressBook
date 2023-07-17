@@ -1,1 +1,43 @@
-<p>contact-detail works!</p>
+<div *ngIf="!contact; else contactTemplate">
+  <h2>Contact not found</h2>
+  <p>Redirecting back to contacts in: {{ redirectToContactsIn }}</p>
+</div>
+
+<ng-template #contactTemplate>
+  <mat-card class="custom-card">
+    <mat-card-header>
+      <mat-card-title class="card-header-text">Contact Card</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-title-group class="card-content">
+      <img mat-card-image class="card-image" [src]="contact?.picture?.large"
+           alt="{{ contact?.name?.first }} {{ contact?.name?.last }}">
+      <div class="nested-title-group">
+        <mat-card-title class="contact-name">{{ contact?.name?.first }} {{ contact?.name?.last }}</mat-card-title>
+        <mat-card-subtitle>
+          {{ contact?.location?.city}},
+          {{ contact?.location?.country}}
+        </mat-card-subtitle>
+      </div>
+    </mat-card-title-group>
+
+    <mat-card-content>
+      <div class="text-align">
+        <mat-icon>phone</mat-icon>
+        <span>{{ contact?.phone }}</span>
+      </div>
+      <div class="text-align">
+        <mat-icon>email</mat-icon>
+        <span>{{ contact?.email }}</span>
+      </div>
+      <div class="text-align">
+        <mat-icon>home</mat-icon>
+        <span>{{ contact?.location?.street?.name }} {{ contact?.location?.street?.number }}, {{ contact?.location?.city }}, {{ contact?.location?.country }}</span>
+      </div>
+      <div class="text-align">
+        <mat-icon>calendar_today</mat-icon>
+        <span>{{ contact?.dob?.date | date }}</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</ng-template>

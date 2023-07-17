@@ -1,0 +1,59 @@
+.mat-mdc-card-header{
+  border-bottom: 2px solid lightslategrey;
+  background-color: aliceblue;
+}
+
+.card-header-text {
+  margin-bottom: 5px;
+  font-size: 2.5em; /* adjust as needed */
+  font-weight: bold;
+}
+
+.custom-card {
+  max-width: 45%
+}
+
+.card-content {
+  width: 100%
+}
+
+.card-image {
+  width: 175px; /* Set as needed */
+  height: 175px; /* Set as needed */
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.nested-title-group{
+  margin-top: 10%;
+}
+
+.mat-mdc-card-title-group {
+  box-sizing: border-box;
+  padding-top: 5%;
+  justify-content: flex-start;
+  padding-left: 16px;
+  background-color: aliceblue;
+  padding-bottom: 5%;
+}
+
+.contact-name{
+  font-size: 1.75rem;
+}
+
+.mat-mdc-card-content{
+  margin-top: 20px;
+}
+
+.text-align{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mat-icon{
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+}

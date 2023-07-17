@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgOptimizedImage} from "@angular/common";
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
     BrowserAnimationsModule,
     MatTableModule,
     HttpClientModule,
-    NgOptimizedImage
+    MatCardModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,11 +9,11 @@ import {catchError, map, Observable, of, tap} from "rxjs";
 })
 export class ContactsService {
   private contacts: Contact[] | undefined;
+  private selectedContact?: Contact;
   constructor(private http: HttpClient){}
 
   loadContacts(): Observable<Contact[]> {
     if (this.contacts) {
-      console.log(this.contacts)
       return of(this.contacts);
     } else {
       return this.http.get<RandomUserResponse>('https://randomuser.me/api/?results=10').pipe(
@@ -26,6 +26,11 @@ export class ContactsService {
     }
   }
 
+  setSelectContact(contact: Contact) {
+    this.selectedContact = contact;
+  }
 
-
+  getSelectedContact(): Contact | undefined {
+    return this.selectedContact;
+  }
 }

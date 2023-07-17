@@ -23,7 +23,7 @@ export class ContactListComponent implements OnInit {
   }
 
   openContact(contact: any): void {
+    this.contactsService.setSelectContact(contact);
     this.router.navigate(['/detail', contact.login.uuid]);
-    console.log(contact);
   }
 }
