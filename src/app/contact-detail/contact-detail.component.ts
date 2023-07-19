@@ -16,8 +16,6 @@ export class ContactDetailComponent implements OnInit{
 
   ngOnInit() {
     this.contact = this.contactsService.getSelectedContact();
-    console.log(this.contact);
-
 
     if (!this.contact){
       const countdown$ = timer(0, 1000).pipe(take(5));
@@ -28,8 +26,6 @@ export class ContactDetailComponent implements OnInit{
           this.router.navigate(['/contacts']);
         }
       });
-      //this.router.navigate(['/contacts']);
     }
-
   }
 }

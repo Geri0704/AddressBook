@@ -19,7 +19,6 @@ export class ContactsService {
       return this.http.get<RandomUserResponse>('https://randomuser.me/api/?results=100').pipe(
         map((response: RandomUserResponse) => response.results as Contact[]),
         catchError(error => {
-          console.log('Error loading contacts: ', error);
           return of([]);
         })
       );

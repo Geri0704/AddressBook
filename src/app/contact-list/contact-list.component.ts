@@ -1,9 +1,7 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ContactsService} from "../Services/contacts.service";
 import {Contact} from "../Interfaces/contact.interface";
-import {RandomUserResponse} from "../Interfaces/randomUserResponse.interface";
 import {Router} from "@angular/router";
-import {BehaviorSubject, EMPTY, map, Observable, startWith} from "rxjs";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 
@@ -21,7 +19,6 @@ export class ContactListComponent implements OnInit, AfterViewInit{
   ngOnInit() {
     this.contactsService.loadContacts().subscribe(contacts => {
       this.dataSource.data = contacts;
-
     });
   }
 
@@ -29,7 +26,7 @@ export class ContactListComponent implements OnInit, AfterViewInit{
     this.dataSource.paginator = this.paginator;
   }
 
-  openContact(contact: any): void {
+  openContact(contact: Contact): void {
     this.contactsService.setSelectContact(contact);
     this.router.navigate(['/detail', contact.login.uuid]);
   }
