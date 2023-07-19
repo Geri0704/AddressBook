@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ContactsService} from "../contacts.service";
+import {ContactsService} from "../Services/contacts.service";
 import {Contact} from "../Interfaces/contact.interface";
 import {RandomUserResponse} from "../Interfaces/randomUserResponse.interface";
 import {Router} from "@angular/router";

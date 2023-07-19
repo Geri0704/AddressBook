@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {RandomUserResponse} from "./Interfaces/randomUserResponse.interface";
-import {Contact} from "./Interfaces/contact.interface";
+import {RandomUserResponse} from "../Interfaces/randomUserResponse.interface";
+import {Contact} from "../Interfaces/contact.interface";
 import {catchError, map, Observable, of, tap} from "rxjs";
 
 @Injectable({

@@ -15,6 +15,9 @@ export interface Contact {
     postcode: string ;
   };
   email: string;
+  login: {
+    uuid: string;
+  };
   dob: {
     date: string;
     age: string;

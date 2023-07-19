@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Contact} from "../Interfaces/contact.interface";
-import {ContactsService} from "../contacts.service";
+import {ContactsService} from "../Services/contacts.service";
 import {Router} from "@angular/router";
 import {take, timer} from "rxjs";
 
