@@ -31,3 +31,5 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns" class="bold-header"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openContact(row)"></tr>
 </table>
+
+<mat-paginator [pageSizeOptions]="[10, 20, 50]"></mat-paginator>

@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
+import {MatPaginatorModule} from "@angular/material/paginator";
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import {MatIconModule} from "@angular/material/icon";
     HttpClientModule,
     MatCardModule,
     MatIconModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

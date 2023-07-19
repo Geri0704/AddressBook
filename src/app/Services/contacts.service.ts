@@ -16,7 +16,7 @@ export class ContactsService {
     if (this.contacts) {
       return of(this.contacts);
     } else {
-      return this.http.get<RandomUserResponse>('https://randomuser.me/api/?results=10').pipe(
+      return this.http.get<RandomUserResponse>('https://randomuser.me/api/?results=100').pipe(
         map((response: RandomUserResponse) => response.results as Contact[]),
         catchError(error => {
           console.log('Error loading contacts: ', error);
