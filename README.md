@@ -45,15 +45,15 @@ be suitable for an AddressBook that could potentially be storing thousands of co
 
 ### Features Implements:
 
--Table of Contacts
--Contact details card
--Pagination for the table of contacts
--Page redirection if selected contact does not exist
--Responsive UI
+- Table of Contacts
+- Contact details card
+- Pagination for the table of contacts
+- Page redirection if selected contact does not exist
+- Responsive UI
 
 ### Features To Implement Given More Time:
 
--Set up a backend and database to allow for persistent data
--Make UI look better
--Add sorting and filtering to table of contacts
+- Set up a backend and database to allow for persistent data
+- Make UI look better
+- Add sorting and filtering to table of contacts
 
