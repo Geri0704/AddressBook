@@ -11,6 +11,7 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {ContactsService} from "./Services/contacts.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatIconModule,
     MatPaginatorModule,
   ],
-  providers: [],
+  providers: [ContactsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
